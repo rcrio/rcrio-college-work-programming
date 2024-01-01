@@ -1,0 +1,283 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    
+    //Conversion rates were taken from xe.com on 07/01/2023. They will fluctuate and may be different.
+    int continueChoice = 1;
+    
+    while (continueChoice == 1)
+    {
+        int currencyChoice, convertChoice, rounder;
+        float currencyAmount, newCurrency, newCurrencyRounded, currencyRate;
+        rounder = 0;
+        string currencyName1, currencyName2;
+        cout<<"#=================================#\n";
+        cout<<"|        Bureau De Change         |\n";
+        cout<<"|        Currency Exchange        |\n";
+        cout<<"#=================================#\n\n";
+        cout<<"#=================================#\n";
+        cout<<"|  Please enter a number from 1-7 |\n";
+        cout<<"|  to select your currency        |\n";
+        cout<<"#=================================#\n";
+        cout<<"|1|  Euro                         |\n";
+        cout<<"|2|  US Dollar                    |\n";
+        cout<<"|3|  Japanese Yen                 |\n";
+        cout<<"|4|  Pound                        |\n";
+        cout<<"|5|  Chinese Yuan                 |\n";
+        cout<<"|6|  Icelandic Krona              |\n";
+        cout<<"|7|  Hong Kong Dollar             |\n";
+        cout<<"#=================================#\n";
+        cin>>currencyChoice;
+        cout<<"#=================================#\n";
+        cout<<"|  Please enter a number from 1-7 |\n";
+        cout<<"|  to select your conversion      |\n";
+        cout<<"#=================================#\n";
+        cout<<"|1|  Convert to Euro              |\n";
+        cout<<"|2|  Convert to US Dollar         |\n";
+        cout<<"|3|  Convert to Japanese Yen      |\n";
+        cout<<"|4|  Convert to Pound             |\n";
+        cout<<"|5|  Convert to Chinese Yuan      |\n";
+        cout<<"|6|  Convert to Icelandic Krona   |\n";
+        cout<<"|7|  Convert to Hong Kong Dollar  |\n";
+        cout<<"#=================================#\n";
+        cin>>convertChoice;
+        cout<<"#=================================#\n";
+        cout<<"|  Please enter the amount of     |\n";
+        cout<<"|  currency you have              |\n";
+        cout<<"#=================================#\n";
+        cin>>currencyAmount;
+        
+        if (currencyChoice<=7 && currencyChoice>=1 && convertChoice<=7 && convertChoice>=1) {
+            
+            //Euros
+            if (currencyChoice == 1 && convertChoice == 1) {
+                currencyName1 = "Euros";
+                currencyName2 = "Euros";
+                currencyRate = 1;
+            } else if (currencyChoice == 1 && convertChoice == 2) {
+                currencyName1 = "Euros";
+                currencyName2 = "US Dollars";
+                currencyRate = 1.0656995;
+            } else if (currencyChoice == 1 && convertChoice == 3) {
+                currencyName1 = "Euros";
+                currencyName2 = "Japanese Yen";
+                currencyRate = 140.79393;
+            } else if (currencyChoice == 1 && convertChoice == 4) {
+                currencyName1 = "Euros";
+                currencyName2 = "Pounds";
+                currencyRate = 0.88120074;
+            } else if (currencyChoice == 1 && convertChoice == 5) {
+                currencyName1 = "Euros";
+                currencyName2 = "Chinese Yuan";
+                currencyRate = 7.298639;
+            } else if (currencyChoice == 1 && convertChoice == 6) {
+                currencyName1 = "Euros";
+                currencyName2 = "Icelandic Kronur";
+                currencyRate = 153.34374;
+            } else if (currencyChoice == 1 && convertChoice == 7) {
+                currencyName1 = "Euros";
+                currencyName2 = "Hong Kong Dollars";
+                currencyRate = 8.3204491;
+            } 
+            //US Dollars
+            else if (currencyChoice == 2 && convertChoice == 1) {
+                currencyName1 = "US Dollars";
+                currencyName2 = "Euros";
+                currencyRate = 0.93835083;
+            } else if (currencyChoice == 2 && convertChoice == 2) {
+                currencyName1 = "US Dollars";
+                currencyName2 = "US Dollars";
+                currencyRate = 1;
+            } else if (currencyChoice == 2 && convertChoice == 3) {
+                currencyName1 = "US Dollars";
+                currencyName2 = "Japanese Yen";
+                currencyRate = 132.11411;
+            } else if (currencyChoice == 2 && convertChoice == 4) {
+                currencyName1 = "US Dollars";
+                currencyName2 = "Pounds";
+                currencyRate = 0.82687545;
+            } else if (currencyChoice == 2 && convertChoice == 5) {
+                currencyName1 = "US Dollars";
+                currencyName2 = "Chinese Yuan";
+                currencyRate = 6.8571872;
+            } else if (currencyChoice == 2 && convertChoice == 6) {
+                currencyName1 = "US Dollars";
+                currencyName2 = "Icelandic Kronur";
+                currencyRate = 143.89023;
+            } else if (currencyChoice == 2 && convertChoice == 7) {
+                currencyName1 = "US Dollars";
+                currencyName2 = "Hong Kong Dollars";
+                currencyRate = 7.8075004;
+            } 
+            //Japanese Yen
+            else if (currencyChoice == 3 && convertChoice == 1) {
+                currencyName1 = "Japanese Yen";
+                currencyName2 = "Euros";
+                currencyRate = 0.0071025787;
+            } else if (currencyChoice == 3 && convertChoice == 2) {
+                currencyName1 = "Japanese Yen";
+                currencyName2 = "US Dollars";
+                currencyRate = 0.0075692145;
+            } else if (currencyChoice == 3 && convertChoice == 3) {
+                currencyName1 = "Japanese Yen";
+                currencyName2 = "Japanese Yen";
+                currencyRate = 1;
+            } else if (currencyChoice == 3 && convertChoice == 4) {
+                currencyName1 = "Japanese Yen";
+                currencyName2 = "Pounds";
+                currencyRate = 0.0062587976;
+            } else if (currencyChoice == 3 && convertChoice == 5) {
+                currencyName1 = "Japanese Yen";
+                currencyName2 = "Chinese Yuan";
+                currencyRate = 0.051877365;
+            } else if (currencyChoice == 3 && convertChoice == 6) {
+                currencyName1 = "Japanese Yen";
+                currencyName2 = "Icelandic Kronur";
+                currencyRate = 1.089184;
+            } else if (currencyChoice == 3 && convertChoice == 7) {
+                currencyName1 = "Japanese Yen";
+                currencyName2 = "Hong Kong Dollars";
+                currencyRate = 0.059099626;
+            } 
+            //Pound
+            else if (currencyChoice == 4 && convertChoice == 1) {
+                currencyName1 = "Pounds";
+                currencyName2 = "Euros";
+                currencyRate = 1.1346564;
+            } else if (currencyChoice == 4 && convertChoice == 2) {
+                currencyName1 = "Pounds";
+                currencyName2 = "US Dollars";
+                currencyRate = 1.2093576;
+            } else if (currencyChoice == 4 && convertChoice == 3) {
+                currencyName1 = "Pounds";
+                currencyName2 = "Japanese Yen";
+                currencyRate = 159.76616;
+            } else if (currencyChoice == 4 && convertChoice == 4) {
+                currencyName1 = "Pounds";
+                currencyName2 = "Pounds";
+                currencyRate = 1;
+            } else if (currencyChoice == 4 && convertChoice == 5) {
+                currencyName1 = "Pounds";
+                currencyName2 = "Chinese Yuan";
+                currencyRate = 8.2882473;
+            } else if (currencyChoice == 4 && convertChoice == 6) {
+                currencyName1 = "Pounds";
+                currencyName2 = "Icelandic Kronur";
+                currencyRate = 174.01474;
+            } else if (currencyChoice == 4 && convertChoice == 7) {
+                currencyName1 = "Pounds";
+                currencyName2 = "Hong Kong Dollars";
+                currencyRate = 9.4421201;
+            }
+            //Chinese Yuan
+            else if (currencyChoice == 5 && convertChoice == 1) {
+                currencyName1 = "Chinese Yuan";
+                currencyName2 = "Euros";
+                currencyRate = 0.13689944;
+            } else if (currencyChoice == 5 && convertChoice == 2) {
+                currencyName1 = "Chinese Yuan";
+                currencyName2 = "US Dollars";
+                currencyRate = 0.14591234;
+            } else if (currencyChoice == 5 && convertChoice == 3) {
+                currencyName1 = "Chinese Yuan";
+                currencyName2 = "Japanese Yen";
+                currencyRate = 19.276229;
+            } else if (currencyChoice == 5 && convertChoice == 4) {
+                currencyName1 = "Chinese Yuan";
+                currencyName2 = "Pounds";
+                currencyRate = 0.12065277;
+            } else if (currencyChoice == 5 && convertChoice == 5) {
+                currencyName1 = "Chinese Yuan";
+                currencyName2 = "Chinese Yuan";
+                currencyRate = 1;
+            } else if (currencyChoice == 5 && convertChoice == 6) {
+                currencyName1 = "Chinese Yuan";
+                currencyName2 = "Icelandic Kronur";
+                currencyRate = 20.995361;
+            } else if (currencyChoice == 5 && convertChoice == 7) {
+                currencyName1 = "Chinese Yuan";
+                currencyName2 = "Hong Kong Dollars";
+                currencyRate = 1.139218;
+            }
+            //Icelandic Kronur
+            else if (currencyChoice == 6 && convertChoice == 1) {
+                currencyName1 = "Icelandic Kronur";
+                currencyName2 = "Euros";
+                currencyRate = 0.0065204613;
+            } else if (currencyChoice == 6 && convertChoice == 2) {
+                currencyName1 = "Icelandic Kronur";
+                currencyName2 = "US Dollars";
+                currencyRate = 0.0069497422;
+            } else if (currencyChoice == 6 && convertChoice == 3) {
+                currencyName1 = "Icelandic Kronur";
+                currencyName2 = "Japanese Yen";
+                currencyRate = 0.91811852;
+            } else if (currencyChoice == 6 && convertChoice == 4) {
+                currencyName1 = "Icelandic Kronur";
+                currencyName2 = "Pounds";
+                currencyRate = 0.0057466396;
+            } else if (currencyChoice == 6 && convertChoice == 5) {
+                currencyName1 = "Icelandic Kronur";
+                currencyName2 = "Chinese Yuan";
+                currencyRate = 0.04762957;
+            } else if (currencyChoice == 6 && convertChoice == 6) {
+                currencyName1 = "Icelandic Kronur";
+                currencyName2 = "Icelandic Kronur";
+                currencyRate = 1;
+            } else if (currencyChoice == 6 && convertChoice == 7) {
+                currencyName1 = "Icelandic Kronur";
+                currencyName2 = "Hong Kong Dollars";
+                currencyRate = 0.054260462;
+            }
+            //Hong Kong Dollars
+            else if (currencyChoice == 7 && convertChoice == 1) {
+                currencyName1 = "Hong Kong Dollars";
+                currencyName2 = "Euros";
+                currencyRate = 0.12016966;
+            } else if (currencyChoice == 7 && convertChoice == 2) {
+                currencyName1 = "Hong Kong Dollars";
+                currencyName2 = "US Dollars";
+                currencyRate = 0.12808115;
+            } else if (currencyChoice == 7 && convertChoice == 3) {
+                currencyName1 = "Hong Kong Dollars";
+                currencyName2 = "Japanese Yen";
+                currencyRate = 16.920581;
+            } else if (currencyChoice == 7 && convertChoice == 4) {
+                currencyName1 = "Hong Kong Dollars";
+                currencyName2 = "Pounds";
+                currencyRate = 0.10590842;
+            } else if (currencyChoice == 7 && convertChoice == 5) {
+                currencyName1 = "Hong Kong Dollars";
+                currencyName2 = "Chinese Yuan";
+                currencyRate = 0.87779515;
+            } else if (currencyChoice == 7 && convertChoice == 6) {
+                currencyName1 = "Hong Kong Dollars";
+                currencyName2 = "Icelandic Kronur";
+                currencyRate = 18.429626;
+            } else if (currencyChoice == 7 && convertChoice == 7) {
+                currencyName1 = "Hong Kong Dollars";
+                currencyName2 = "Hong Kong Dollars";
+                currencyRate = 1;
+            }
+            
+            newCurrency = currencyAmount * currencyRate;
+            rounder = (int)(newCurrency * 100 + 0.5);
+            newCurrencyRounded = rounder / 100.0;
+            cout<<"Your currency ("<<currencyName1<<"): "<<currencyAmount<<endl;
+            cout<<"Converted currency ("<<currencyName2<<"): "<<newCurrencyRounded<<endl;
+            
+        } 
+        
+        else {
+            cout<<"Incorrect values.";
+        }
+        
+        cout<<"\n\nWould you like to continue and try another conversion or exit the program?\n";
+        cout<<"Please type and enter 1 to continue\n";
+        cout<<"Please type and enter 0 to exit the program\n";
+        cin>>continueChoice;
+    }
+}
